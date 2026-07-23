@@ -1,11 +1,25 @@
 # Changelog
 
+### 4.1.0
+* Remove net7 target as it is out of support for more than 1 year
+* Move the build and tests to run on Ubuntu 24.04 due to the obsolesce of Ubuntu 20.04
+* Add MacOS CI build back
+* Support async in ILdapBindHandler
+* Add helper extension methods SearchAsyncAsList for easier usage as wrappers of SearchAsync
+
 ### 4.0.0
-* various fixes
-* add net8 as target
-* add net7 as target; remove net5; remove netcoreapp3.1
-* add net6 as target
-* Change all the apis to be fully-async - no Task.Run tricks :).
+* Add explicit net9 as target
+* Various fixes
+* Various improvements
+* Add support from Ldap Password Modify Extended Operation - RFC 3062
+* Add nullable support to LdapEntry
+* Move to IEnumerable from IEnumerator
+* Remove dependency of System.Linq.Async
+* Add explicit net8 as target
+* Add explicit net7 as target; remove net5
+* Remove netcoreapp3.1 explicit support
+* Add explicit net6 as target
+* **Breaking change** Change all the apis to be fully-async.
     * with contributions from https://github.com/nesc58.
     * thanks to https://github.com/wslyhbb for the initial trigger :).
 * **Breaking change** Drop support for .NET Standard 1.3 due to lack of complete async support.
