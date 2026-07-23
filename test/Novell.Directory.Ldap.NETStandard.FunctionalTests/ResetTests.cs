@@ -47,7 +47,7 @@ namespace Novell.Directory.Ldap.NETStandard.FunctionalTests
                 // userPassword on write, so neither round-trips byte-for-byte.
                 ldapEntry.GetAttributeSet().AssertSameAs(
                     readEntry.GetAttributeSet(),
-                    ["objectClass", "userPassword"]);
+                    new List<string> { "objectClass", "userPassword" });
             });
         }
     }
